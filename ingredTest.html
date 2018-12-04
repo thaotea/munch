@@ -1,0 +1,118 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>My Ingredients</title>
+
+        <link rel="stylesheet" href="bootstrap.min.css" />
+        <link rel="stylesheet" href="jquery.ui.min.css" />
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.ui.min.js"></script>
+        <link rel="stylesheet" href="todo.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="search-filter.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+    .header {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background-color: #E9E9E9;
+      padding: 20px 10px;
+      padding-bottom: 20px;
+    }
+    .footer {
+     position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #E9E9E9;
+      color: #505050;
+    }
+    .header a {
+      float: left;
+      color: #505050;
+      padding: 12px;
+      line-height: 25px;
+      font-size: 50px;
+      text-decoration: none;
+      font-family: 'Frank Ruhl Libre', serif;
+    }
+    .header a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    @media screen and (max-width: 500px) {
+      .header a {
+      float: none;
+      display: block;
+      }
+      .container {
+        position: absolute;
+        top: 85px;
+        right: 0;
+        max-width: 100%;
+      }
+    }
+    button {
+      border: 1px solid black;
+    }
+    </style>
+    <body class="well">
+      <div class="header">
+        <a href="index.html">munch</a>
+      </div>
+        <div id="container">
+
+            <div class="task-list">
+                <h3 style="color:#505050; font-family: 'Frank Ruhl Libre', serif";>Add Ingredients</h3>
+                <form id="todo-form">
+                    <input type="text" placeholder="Ingredient" />
+                    <input type="text" id="datepicker" placeholder="Expiration Date (mm/dd/yyyy)" />
+                    <textarea placeholder="Description"></textarea>
+                    <input type="button" class="btn btn-primary" value="Add" onclick="todo.add();" />
+                </form>
+
+                <div class="task-list task-container" id="pending">
+                    <h3 style="color:#505050; font-family: 'Frank Ruhl Libre', serif";> My Ingredients</h3>
+                    <div class="todo-task">
+                        <div class="task-header">Apples</div>
+                        <div class="task-date">11/21/2018</div>
+                        <div class="task-description">Granny Smith</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="clear:both;"></div>
+	    <script type="text/javascript" src="jquery.min.js"></script>
+            <script type="text/javascript" src="bootstrap.min.js"></script>
+            <script type="text/javascript" src="jquery.ui.min.js"></script>
+            <script type="text/javascript" src="todo.js"></script>
+
+            <script type="text/javascript">
+                $( "#datepicker" ).datepicker();
+                $( "#datepicker" ).datepicker("option", "dateFormat", "mm/dd/yy");
+
+                $(".task-container").droppable();
+                $(".todo-task").draggable({ revert: "valid", revertDuration:200 });
+                todo.init();
+            </script>
+        </div>
+        <div class="footer">
+          <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
+          <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
+          <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
+          <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o"></i></a></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+}
+
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  padding: 20px 10px;
+  padding-bottom: 48px;
+
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #E9E9E9;
+   color: #505050;
+}
+
+
+.header a {
+  float: left;
+  color: #505050;
+  padding: 12px;
+  line-height: 25px;
+  font-size: 50px;
+  text-decoration: none;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+  }
+
+  .container {
+      position: absolute;
+      top: 85px;
+      right: 0;
+      max-width: 100%;
+  }
+
+  img {
+      max-width: 100%;
+      max-height: 100%;
+  }
+
+  div.scroll {
+    background-color: white;
+    max-width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#back {
+    position:absolute;
+    left 0px;
+    background-color: Transparent;
+    border: none;
+    color: black;
+}
+
+h1 {
+  text-align:center;
+  font-weight:bold;
+  letter-spacing: 2px;
+}
+
+h5 {
+  text-align:center;
+}
+
+h6 {
+  text-align:center;
+}
+
+div.ingredient {
+  padding: 10px 10px;
+  padding-left:45px;
+  background-color: #F8F8F8;
+
+}
+
+div.recipe {
+  padding: 10px 10px;
+  padding-left:20px;
+}
+
+#ingredient {
+  letter-spacing: .6px;
+  text-align:left;
+  font-weight:bold;
+}
+#ingredientBody {
+  text-align:left;
+  letter-spacing: .6px;
+  line-height: 1.8;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #EFEFEF;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.overlay .closebtn {
+	  color: black;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 40px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<a href="index.html" class="w3-btn w3-xlarge" id="back"><i class="fa fa-arrow-left"></i></a>
+
+
+<div class="scroll">
+  <img src="images/poke1.PNG" alt="poke" style="border:0;">
+  <h1> Poke Bowl </h1>
+  <hr>
+  <h5> 🕒 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🙂
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="font-size:1em" onclick="openNav()">📄</span>
+</h5>
+  <h6> &nbsp; 25 mins &nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 servings
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="font-size:1em" onclick="openNav()"> Nutrition</span></h6>
+    <br>
+    <div class = "ingredient">
+          <h5 id="ingredient"> INGREDIENTS </h5>
+          <h5 id="ingredientBody"> ½ lb sashimi-grade tuna<br /> ½ lb sashimi-grade salmon
+          <br /> Handful limu (a type of seaweed) (optional) <br /> 2 green onions/scallions <br /> ¼ onion (preferably Maui onion)
+          <br /> 1 tsp kukui nut (optional)<br />
+        1 Tbsp white and black sesame seeds (roasted/toasted)<br />
+          ¼ tsp sea salt or Hawaiian salt <br /> ⅓ cup gluten-free soy sauce (1/3 cup = 80 ml) (or regular soy sauce) <br />
+          2 Tbsp sesame oil <br /> 1 Tbsp rice vinegar
+          <br /> Steamed rice and sliced avocado (for serving)
+</h5>
+    </div>
+
+    <div class = "recipe">
+      <h5 id="ingredient"> RECIPE PREPARATION </h5>
+      <h5 id="ingredientBody"> Cut sashimi-grade salmon and tuna into bite size pieces. I recommend cutting into slightly “bigger” bite size for the better texture and taste.<br /><br />
+      Cut limu into smaller pieces, about ½“ (1 cm) pieces. Thinly slice the green onions.<br /><br />
+      Thinly slice the onion and then cut into ¾ inch (2 cm) length.<br /><br />
+      Put the salmon and tuna in a large bowl and sprinkle ¼ tsp. sea salt. Then add the onion, green onion, limu, and kukui nut.<br /><br />
+      Add ⅓ cup (80 ml) gluten-free or regular soy sauce and 2 Tbsp. sesame oil.<br /><br />
+      Add 1 Tbsp. rice vinegar. Sprinkle 1 Tbsp. toasted white and black sesame seeds.<br /><br />
+      Serve steamed rice in a large donburi bowl or plate. Let it cool down a little bit then pile poke on top. Add toppings as you like and enjoy immediately.</h5>
+
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+
+
+<div class="footer">
+  <p></p>
+  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+</div>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <img src="images/shrimpfact.jpg" alt="shrimpfact" style="border:0;">
+
+  </div>
+</div>
+
+
+  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+}
+
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  padding: 20px 10px;
+  padding-bottom: 48px;
+
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #E9E9E9;
+   color: #505050;
+}
+
+
+.header a {
+  float: left;
+  color: #505050;
+  padding: 12px;
+  line-height: 25px;
+  font-size: 50px;
+  text-decoration: none;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+  }
+
+  .container {
+      position: absolute;
+      top: 85px;
+      right: 0;
+      max-width: 100%;
+  }
+
+  img {
+      max-width: 100%;
+      max-height: 100%;
+  }
+
+  div.scroll {
+    background-color: white;
+    max-width: 100%;
+    height: 1500px;
+    overflow: scroll;
+}
+
+#back {
+    position:absolute;
+    left 0px;
+    background-color: Transparent;
+    border: none;
+    color: black;
+}
+
+h1 {
+  text-align:center;
+  font-weight:bold;
+  letter-spacing: 2px;
+}
+
+h5 {
+  text-align:center;
+}
+
+h6 {
+  text-align:center;
+}
+
+div.ingredient {
+  padding: 10px 10px;
+  padding-left:45px;
+  background-color: #F8F8F8;
+
+}
+
+div.recipe {
+  padding: 10px 10px;
+  padding-left:20px;
+}
+
+#ingredient {
+  letter-spacing: .6px;
+  text-align:left;
+  font-weight:bold;
+}
+#ingredientBody {
+  text-align:left;
+  letter-spacing: .6px;
+  line-height: 1.8;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #EFEFEF;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.overlay .closebtn {
+	  color: black;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 40px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<a href="index.html" class="w3-btn w3-xlarge" id="back"><i class="fa fa-arrow-left"></i></a>
+
+
+<div class="scroll">
+  <img src="images/potato1.PNG" alt="potato" style="border:0;">
+  <h1> Mashed Potatoes </h1>
+  <hr>
+  <h5> 🕒 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🙂
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="font-size:1em" onclick="openNav()">📄</span>
+</h5>
+  <h6> &nbsp; 50 mins &nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 servings
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="font-size:1em" onclick="openNav()"> Nutrition</span></h6>
+    <br>
+    <div class = "ingredient">
+          <h5 id="ingredient"> INGREDIENTS </h5>
+          <h5 id="ingredientBody"> 4 lb. medium Yukon Gold potaoes <br /> Kosher Salt
+          <br /> ⅔–1 cup heavy cream <br /> ⅔–1 cup whole milk <br /> 1¼ cups (2½ sticks) unsalted butter, cut into pieces
+          <br /> ½ cup sour cream<br />
+          Freshy ground black pepper</h5>
+    </div>
+
+    <div class = "recipe">
+      <h5 id="ingredient"> RECIPE PREPARATION </h5>
+      <h5 id="ingredientBody"> Place potatoes in a large pot and pour in cold water to cover by 1". Add a large handful of salt (water should taste briny, like the ocean) and bring to a boil. Reduce heat and simmer until potatoes are very tender but not crumbly, 30–40 minutes. Drain and return potatoes to warm pot to dry (off heat). <br /><br />
+
+Meanwhile, heat ⅔ cup cream and ⅔ cup milk in a small saucepan over medium until just about to simmer. Reduce heat to low and keep warm until ready to add to potatoes. <br /><br />
+
+Pass hot potatoes and butter through ricer into a large bowl (this will help combine them quickly; most of the skins should stay behind but pick out any small pieces that get through if you want); season generously with salt. Mix with a potato masher until butter is melted and combined. <br /><br />
+
+Mixing constantly, gradually add warm cream mixture to potatoes, then mix in sour cream. Taste and season with salt and pepper as desired.<br /><br /></h5>
+
+    </div>
+</div>
+
+
+<div class="footer">
+  <p></p>
+  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+</div>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <img src="images/potatofact.jpg" alt="potatofact" style="border:0;">
+
+  </div>
+</div>
+
+
+  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</body>
+</html>

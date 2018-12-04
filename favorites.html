@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+}
+
+p {
+  margin:0;
+  padding:0;
+}
+
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  padding: 20px 10px;
+  padding-bottom: 20px;
+
+}
+
+.footer {
+   padding-top:5px;
+   padding-bottom:5px;
+   height:60px;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #E9E9E9;
+   color: #505050;
+}
+
+
+.header a {
+  float: left;
+  color: #505050;
+  padding: 12px;
+  line-height: 25px;
+  font-size: 50px;
+  text-decoration: none;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+  }
+
+  .container {
+      position: absolute;
+      top: 85px;
+      right: 0;
+      max-width: 100%;
+  }
+
+  img {
+      max-width: 100%;
+      max-height: 100%;
+  }
+
+  div.scroll {
+    background-color: white;
+    max-width: 100%;
+    height: 612px;
+    overflow: scroll;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size:20px;
+  padding: 10px;
+  color: #5484AE;
+}
+
+
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="header">
+  <a href="index.html">munch</a>
+  </div>
+
+
+  <div class="scroll">
+    <p id="message" style="display:inline;">  <br>&nbsp;&nbsp;&nbsp;&nbsp;Your favorites list is empty.
+      </a></p>
+    <p id="myP" style="display:none;">  <a href="pasta.html">
+        <img src="images/pasta.PNG" alt="pasta" style="border:0;">
+      </a></p>
+
+    <p id="myP2" style="display:none;">    <a href="potato.html">
+        <img src="images/potato.PNG" alt="potato" style="border:0;">
+    </a></p>
+
+    <p id="myP3" style="display:none;">   <a href="shrimp.html">
+      <img src="images/shrimp.PNG" alt="shrimp" style="border:0;">
+    </a></p>
+
+    <p id="myP4" style="display:none;">    <a href="bbq.html">
+      <img src="images/bbq.PNG" alt="bbq" style="border:0;">
+    </a></p>
+
+    <p id="myP5" style="display:none;">    <a href="chicken.html">
+      <img src="images/chicken.PNG" alt="chicken" style="border:0;">
+    </a></p>
+
+    <p id="myP6" style="display:none;">      <a href="udon.html">
+      <img src="images/udon.PNG" alt="udon" style="border:0;">
+    </a></p>
+
+    <p id="myP7" style="display:none;">      <a href="poke.html">
+        <img src="images/poke.PNG" alt="poke" style="border:0;">
+    </a></p>
+
+    <p id="myP8" style="display:none;">    <a href="soup.html">
+      <img src="images/soup.PNG" alt="soup" style="border:0;">
+    </a></p>
+
+    <p id="myP9" style="display:none;">      <a href="salad.html">
+        <img src="images/salad.PNG" alt="salad" style="border:0;">
+    </a></p>
+
+
+
+<!--
+    <a href="pasta.html">
+      <img src="images/pasta.PNG" alt="pasta" style="border:0;">
+    </a>
+
+    <a href="potato.html">
+      <img src="images/potato.PNG" alt="potato" style="border:0;">
+    </a>
+
+    <a href="shrimp.html">
+      <img src="images/shrimp.PNG" alt="shrimp" style="border:0;">
+    </a>
+
+    <a href="bbq.html">
+      <img src="images/bbq.PNG" alt="bbq" style="border:0;">
+    </a>
+
+    <a href="chicken.html">
+      <img src="images/chicken.PNG" alt="chicken" style="border:0;">
+    </a>
+
+    <a href="udon.html">
+      <img src="images/udon.PNG" alt="udon" style="border:0;">
+    </a>
+
+    <a href="poke.html">
+      <img src="images/poke.PNG" alt="poke" style="border:0;">
+    </a>
+
+    <a href="soup.html">
+      <img src="images/soup.PNG" alt="soup" style="border:0;">
+    </a>
+
+    <a href="salad.html">
+      <img src="images/salad.PNG" alt="salad" style="border:0;">
+    </a>
+-->
+<br>
+<br>
+<br>
+<br>
+
+<script>
+
+function myFunction() {
+  if (localStorage.getItem("customName1") == "true") {
+    document.getElementById("myP").style.display = "inline";
+    document.getElementById("message").style.display = "none";}
+
+
+  if (localStorage.getItem("customName2") == "true") {
+    document.getElementById("myP2").style.display = "inline";
+    document.getElementById("message").style.display = "none";}
+
+    if (localStorage.getItem("customName3") == "true") {
+      document.getElementById("myP3").style.display = "inline";
+      document.getElementById("message").style.display = "none";}
+
+      if (localStorage.getItem("customName4") == "true") {
+        document.getElementById("myP4").style.display = "inline";
+        document.getElementById("message").style.display = "none";}
+
+        if (localStorage.getItem("customName5") == "true") {
+          document.getElementById("myP5").style.display = "inline";
+          document.getElementById("message").style.display = "none";}
+
+          if (localStorage.getItem("customName6") == "true") {
+            document.getElementById("myP6").style.display = "inline";
+            document.getElementById("message").style.display = "none";}
+
+            if (localStorage.getItem("customName7") == "true") {
+              document.getElementById("myP7").style.display = "inline";
+              document.getElementById("message").style.display = "none";}
+
+              if (localStorage.getItem("customName8") == "true") {
+                document.getElementById("myP8").style.display = "inline";
+                document.getElementById("message").style.display = "none";}
+
+                if (localStorage.getItem("customName9") == "true") {
+                  document.getElementById("myP9").style.display = "inline";
+                  document.getElementById("message").style.display = "none";}
+
+  }
+
+  myFunction();
+
+</script>
+
+</div>
+
+<div class="footer">
+  <p></p>
+  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+</div>
+
+
+</body>
+</html>

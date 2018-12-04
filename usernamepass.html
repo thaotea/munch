@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+}
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  padding: 20px 10px;
+  padding-bottom: 40px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  color: #505050;
+}
+.header a {
+  float: left;
+  color: #505050;
+  padding: 12px;
+  line-height: 25px;
+  font-size: 50px;
+  text-decoration: none;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+@media screen and (max-width: 500px) {
+  .header a {
+  float: none;
+  display: block;
+  }
+  .container {
+    position: absolute;
+    top: 85px;
+    right: 0;
+    max-width: 100%;
+  }
+}
+
+input[type=button] {
+  border: 1px solid lightgray;
+}
+
+.body {
+    padding-left: 40px;
+}
+</style>
+</head>
+
+<body>
+  <div class="header">
+    <a href="index.html">munch</a>
+  </div>
+
+  <a href="profile.html" class="w3-btn w3-xlarge" id="back"><i class="fa fa-arrow-left"></i></a>
+<div class="body">
+  <h3 style="font-family: 'Frank Ruhl Libre', serif;color: #505050;">Password Change</h3>
+
+  <form name="login">
+  Current Password<br><input type="password" name="currpass" style="border-color:lightgray"/><br>
+  New Password<br><input type="password" name="newpass" style="border-color:lightgray"/><br><br>
+  <input type="button" onclick="check(this.form)" value="Enter"/>
+  </form>
+  <script language="javascript">
+  function check(form)/*function to check userid & password*/
+  {
+   /*the following code checkes whether the entered userid and password are matching*/
+    if(form.currpass.value != "test123")
+     {
+       alert("Error! Current password is incorrect.")/*opens the target page while Id & password matches*/
+     }
+    else
+    {
+      alert("Password has sucessfully been changed.")
+      window.open('profile.html','_self')
+    }
+  }
+  </script>
+</div>
+<div class="footer">
+  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+</div>
+
+</body>
+</html>

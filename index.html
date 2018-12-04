@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="search-filter.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+<style>
+
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+}
+
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  padding: 20px 10px;
+  padding-bottom: 20px;
+}
+
+.footer {
+  padding-top:5px;
+  padding-bottom:5px;
+  height:60px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  color: #505050;
+}
+
+
+.header a {
+  float: left;
+  color: #505050;
+  padding: 12px;
+  line-height: 25px;
+  font-size: 50px;
+  text-decoration: none;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+  float: none;
+  display: block;
+  }
+}
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+div.scroll {
+  background-color: white;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.search {
+  position: absolute;
+  right: 10px;
+  top: 22px;
+}
+
+.filterDiv {
+  width: 100%;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+
+/* Style the buttons */
+.btn {
+  float: left;
+  border: 1px solid lightgray;
+  border-radius:0px;
+  width:50%;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+}
+
+.btn.active {
+  background-color: #5484AE;
+  color: white;
+}
+
+.dropbtn {
+    width:375px;
+    background-color: #606060;
+    color: #DCDCDC;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    text-align: right;
+}
+
+.dropbtn:focus {
+    background-color: #464646;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+.heart {
+  font-size: 25px;
+	color:white;
+  opacity:0.6;
+
+}
+
+
+.inside button {
+  background:none;
+  border:none;
+  position: absolute;
+  right: 3px;
+}
+
+.scroll .fa-heart{
+  font-size: 25px;
+	color:red;
+  opacity:0.6;
+}
+
+.transition{
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition:all 0.5s ease-out;
+  -o-transition:all 0.5s ease-out;
+  transition:all 0.5s ease-out;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html">munch</a>
+</div>
+
+<div class="search">
+  <a href="search.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-search" style="color:#5484AE;"></i></a>
+</div>
+
+<div class="scroll">
+
+    <div class="dropdown">
+      <button onclick="myFunction();" class="dropbtn">  <div id="Filters">Filters ⮟</div> </button>
+
+      <div id="myDropdown" class="dropdown-content">
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')">Clear filters</button>
+          <button class="btn" onclick="filterSelection('all')">Use Ingredients</button>
+          <button class="btn" onclick="filterSelection('gluten')">Gluten-Free</button>
+          <button class="btn" onclick="filterSelection('healthy')">Healthy</button>
+          <button class="btn" onclick="filterSelection('lowcarb')">Low Carb</button>
+          <button class="btn" onclick="filterSelection('lowcalorie')">Low Calorie</button>
+          <button class="btn" onclick="filterSelection('vegan')">Vegan</button>
+          <button class="btn" onclick="filterSelection('vegeterian')">Vegetarian</button>
+        </div>
+      </div>
+    </div>
+
+<div class = "inside">
+  <div class="filterDiv vegeterian">
+    <button id=Favorite1> <br><br><br><br><br><br><br><i class="heart transition fa fa-heart-o"></i></button>
+  <a href="pasta.html">
+    <img src="images/pasta.PNG" alt="pasta" style="border:0;">
+  </a>
+
+  </div>
+
+  <div class="filterDiv vegeterian">
+    <button id=Favorite2> <br><br><br><br><br><br><br><i class="heart transition fa fa-heart-o"></i></button>
+
+  <a href="potato.html">
+    <img src="images/potato.PNG" alt="potato" style="border:0;">
+  </a>
+  </div>
+
+  <div class="filterDiv healthy lowcalorie lowcarb">
+    <button id=Favorite3> <br><br><br><br><br><br><br><i class="heart transition fa fa-heart-o"></i></button>
+
+  <a href="shrimp.html">
+    <img src="images/shrimp.PNG" alt="shrimp" style="border:0;">
+  </a>
+  </div>
+
+  <div class="filterDiv lowcarb">
+    <button id=Favorite4> <br><br><br><br><br><br><br><i class="heart transition fa fa-heart-o"></i></button>
+
+
+  <a href="bbq.html">
+    <img src="images/bbq.PNG" alt="bbq" style="border:0;">
+  </a>
+  </div>
+
+
+  <div class="filterDiv healthy gluten lowcalorie">
+    <button id=Favorite5> <br><br><br><br><br><br><br><i class="heart transition fa fa-heart-o"></i></button>
+
+  <a href="chicken.html">
+    <img src="images/chicken.PNG" alt="chicken" style="border:0;">
+  </a>
+  </div>
+
+
+  <div class="filterDiv vegeterian vegan healthy lowcalorie">
+    <button id=Favorite6> <br><br><br><br><br><br><br><i class="heart transition fa fa-heart-o"></i></button>
+
+
+  <a href="udon.html">
+    <img src="images/udon.PNG" alt="udon" style="border:0;">
+  </a>
+  </div>
+
+  <div class="filterDiv healthy lowcarb lowcalorie gluten">
+    <button id=Favorite7> <br><br><br><br><br><br><br><i class="heart transition fa fa-heart-o"></i></button>
+
+  <a href="poke.html">
+    <img src="images/poke.PNG" alt="poke" style="border:0;">
+  </a>
+  </div>
+
+  <div class="filterDiv vegan vegeterian healthy lowcarb gluten">
+    <button id=Favorite8> <br><br><br><br><br><br><br><i class="heart transition fa fa-heart-o"></i></button>
+
+
+  <a href="soup.html">
+    <img src="images/soup.PNG" alt="soup" style="border:0;">
+  </a>
+  </div>
+
+  <div class="filterDiv vegan vegeterian healthy lowcarb lowcalorie">
+    <button id=Favorite9 > <br><br><br><br><br><br><br><i class="heart transition fa fa-heart-o"></i></button>
+
+
+  <a href="salad.html">
+    <img src="images/salad.PNG" alt="salad" style="border:0;">
+  </a>
+  </div>
+<br>
+<br>
+<br></div>
+</div>
+
+
+
+<div class="footer">
+  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+</div>
+
+
+<script id="entry-template" type="text/x-handlebars-template">
+		<div class="project" id="project{{index}}">
+			<a href="#" class="thumbnail">
+				<img src="{{profilePic}}" alt="Lorem Pixel image" class="img">
+				<p>{{title}}</p>
+			</a>
+		</div>
+</script>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/handlebars-v4.0.11.js"></script>
+<script src="js/favorite.js"></script>
+
+<script>
+
+  $(".heart.fa").click(function() {
+    $(this).toggleClass("fa-heart fa-heart-o");
+});
+
+
+
+
+
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+      var x = document.getElementById("Filters");
+      if (x.innerHTML === "Filters ⮟") {
+        x.innerHTML = "Filters ⮝";
+      } else {
+        x.innerHTML = "Filters ⮟";
+    }
+  }
+
+  function myFunction2() {
+
+  }
+
+  function filterFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      div = document.getElementById("myDropdown");
+      a = div.getElementsByTagName("a");
+      for (i = 0; i < a.length; i++) {
+          if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+          } else {
+              a[i].style.display = "none";
+          }
+      }
+  }
+
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+
+</body>
+</html>

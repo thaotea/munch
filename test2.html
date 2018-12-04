@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="css/introHCI.css" rel="stylesheet">
+
+<style>
+
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+  background-color:white;
+}
+
+
+.heart {
+  font-size: 25px;
+	color:red;
+}
+
+button {
+  background:none;
+  border:none;
+}
+</style>
+</head>
+<body>
+
+
+
+<script id="entry-template" type="text/x-handlebars-template">
+		<div class="project" id="project{{index}}">
+			<a href="#" class="thumbnail">
+				<img src="{{profilePic}}" alt="Lorem Pixel image" class="img">
+				<p>{{title}}</p>
+			</a>
+		</div>
+</script>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/handlebars-v4.0.11.js"></script>
+<script src="js/favorite.js"></script>
+<!--a href="settings.html" class="fixed2"><h3> SETTINGS </h3></a>
+<a href="help.html" class="fixed1"><h3> HELP </h3></a-->
+
+
+
+<h4 class="center" id="myFav1">Button Boolean </h4>
+<button id=Favorite1>  <i class="heart fa fa-heart-o"></i></button>
+
+<h4 class="center" id="myFav2">Button Boolean </h4>
+<button id=Favorite2><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
+<h4 class="center" id="myFav3">Button Boolean </h4>
+<button id=Favorite3><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
+<h4 class="center" id="myFav4">Button Boolean </h4>
+<button id=Favorite4><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
+<h4 class="center" id="myFav5">Button Boolean </h4>
+<button id=Favorite5><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
+<h4 class="center" id="myFav6">Button Boolean </h4>
+<button id=Favorite6><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
+<h4 class="center" id="myFav7">Button Boolean </h4>
+<button id=Favorite7><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
+<h4 class="center" id="myFav8">Button Boolean </h4>
+<button id=Favorite8><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
+<h4 class="center" id="myFav9">Button Boolean </h4>
+<button id=Favorite9><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+<script>
+
+
+$(".heart.fa").click(function() {
+  $(this).toggleClass("fa-heart fa-heart-o");
+});
+
+
+  </script>
+</body>
+</html>

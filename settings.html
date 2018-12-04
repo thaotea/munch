@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="heart.css" rel="stylesheet">
+<style>
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  padding: 20px 10px;
+  padding-bottom: 20px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  color: #505050;
+}
+.header a {
+  float: left;
+  color: #505050;
+  padding: 12px;
+  line-height: 25px;
+  font-size: 50px;
+  text-decoration: none;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+@media screen and (max-width: 500px) {
+  .header a {
+  float: none;
+  display: block;
+  }
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+button {
+  background-color: lightgray;
+  border-radius: 2px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    margin:0px auto; width: width-of-popup;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+</style>
+</head>
+
+<body>
+  <div class="header">
+    <a href="index.html">munch</a>
+  </div>
+  <h1 style="font-family: 'Frank Ruhl Libre', serif;color: #505050;"> Settings </h1>
+  <table>
+    <tr> <button type="button"> <a href="usernamepass.html">Change Username/Password</a></button> </tr>
+    <tr> <button type="button">
+      <div class="popup" onclick="myFunction2()"> Push Notifications
+        <span class="popuptext" id="myPopup2"> Notify me if my food expires within: <br>
+          <input type="checkbox"> Never <br>
+          <input type="checkbox"> 1 hour <br>
+          <input type="checkbox"> 1 day <br>
+          <input type="checkbox" checked> 3 days <br>
+          <input type="checkbox" checked> 1 week <br> </span>
+      </div> </button> </tr>
+    <tr> <button type="button"> <a href="logoutmessage.html">Logout </button> </tr>
+
+  </table>
+
+  <script>
+
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+
+    function myFunction2() {
+      var popup2 = document.getElementById("myPopup2");
+      popup2.classList.toggle("show");
+    }
+
+  </script>
+
+  <div class="footer">
+    <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
+    <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
+    <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
+    <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+  </div>
+
+</body>
+</html>

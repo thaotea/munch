@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+}
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  padding: 20px 10px;
+  padding-bottom: 10px;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #E9E9E9;
+   color: #505050;
+}
+.header a {
+  float: left;
+  color: #505050;
+  padding: 12px;
+  line-height: 25px;
+  font-size: 50px;
+  text-decoration: none;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+  }
+  .container {
+      position: absolute;
+      top: 85px;
+      right: 0;
+      max-width: 100%;
+  }
+  img {
+      max-width: 100%;
+      max-height: 100%;
+  }
+  div.scroll {
+    background-color: white;
+    max-width: 100%;
+    height: 612px;
+    overflow: scroll;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html">munch</a>
+  </div>
+
+
+
+
+  <div class="scroll">
+
+  <div id="accordion">
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button style="color:#5484AE;text-decoration:none;font-size:25px;"class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          All Recipes
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          <a href="pasta.html" id="pastaFav">
+            <img src="images/pasta.PNG" alt="pasta" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="potato.html">
+            <img src="images/potato.PNG" alt="potato" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="shrimp.html">
+            <img src="images/shrimp.PNG" alt="shrimp" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="shrimp.html">
+            <img src="images/shrimp.PNG" alt="shrimp" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="shrimp.html">
+            <img src="images/shrimp.PNG" alt="shrimp" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="bbq.html">
+            <img src="images/bbq.PNG" alt="bbq" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="chicken.html">
+            <img src="images/chicken.PNG" alt="chicken" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="udon.html">
+            <img src="images/udon.PNG" alt="udon" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="poke.html">
+            <img src="images/poke.PNG" alt="poke" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="soup.html">
+            <img src="images/soup.PNG" alt="soup" style="border:0;">
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="salad.html">
+            <img src="images/salad.PNG" alt="salad" style="border:0;">
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button style="color:#5484AE;text-decoration:none;font-size:25px;"class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Favorites
+            </button>
+          </h5>
+            <div class="card-body">
+              <a href="pasta.html">
+                <img src="images/pasta.PNG" alt="pasta" style="border:0;">
+              </a>
+            </div>
+            <div class="card-body">
+              <a href="shrimp.html">
+                <img src="images/shrimp.PNG" alt="shrimp" style="border:0;">
+              </a>
+            </div>
+    </div>
+  </div>
+
+  </div>
+
+</div>
+<div class="container">
+  <form  action="#">
+      <img src="images/pasta.PNG" alt="pasta" style="border:0;">
+</form>
+<ul id="list"></ul>
+</div>
+<script>
+/*
+  $("#pastaFav").click(function(){
+    var pastaFaved;
+    localStorage.setItem("fave",pastaFaved);
+  }
+);
+
+var pastas = localStorage.getItem("fave");
+if (pastas) {
+  $("pastaFav").html(pastas);
+}
+*/
+(function(){
+
+  var list = document.querySelector('#list'),
+      form = document.querySelector('form'),
+      item = document.querySelector('#item');
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    list.innerHTML += '<li>' + item.value + '</li>';
+    store();
+    item.value = "";
+  },false)
+
+  list.addEventListener('click',function(e){
+    var t = e.target;
+    if(t.classList.contains('checked')){
+      t.parentNode.removeChild(t);
+    } else {
+      t.classList.add('checked');
+    }
+    store();
+  },false)
+
+  function store() {
+    window.localStorage.myitems = list.innerHTML;
+  }
+
+  function getValues() {
+    var storedValues = window.localStorage.myitems;
+    if(!storedValues) {
+      list.innerHTML = '';
+    }
+    else {
+      list.innerHTML = storedValues;
+    }
+  }
+  getValues();
+})();
+
+
+</script>
+
+
+
+
+
+
+
+<div class="footer">
+  <p></p>
+  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+</div>
+
+
+</body>
+</html>

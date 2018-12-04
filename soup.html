@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+}
+
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #E9E9E9;
+  padding: 20px 10px;
+  padding-bottom: 48px;
+
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #E9E9E9;
+   color: #505050;
+}
+
+
+.header a {
+  float: left;
+  color: #505050;
+  padding: 12px;
+  line-height: 25px;
+  font-size: 50px;
+  text-decoration: none;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+  }
+
+  .container {
+      position: absolute;
+      top: 85px;
+      right: 0;
+      max-width: 100%;
+  }
+
+  img {
+      max-width: 100%;
+      max-height: 100%;
+  }
+
+  div.scroll {
+    background-color: white;
+    max-width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#back {
+    position:absolute;
+    left 0px;
+    background-color: Transparent;
+    border: none;
+    color: black;
+}
+
+h1 {
+  text-align:center;
+  font-weight:bold;
+  letter-spacing: 2px;
+}
+
+h5 {
+  text-align:center;
+}
+
+h6 {
+  text-align:center;
+}
+
+div.ingredient {
+  padding: 10px 10px;
+  padding-left:45px;
+  background-color: #F8F8F8;
+
+}
+
+div.recipe {
+  padding: 10px 10px;
+  padding-left:20px;
+}
+
+#ingredient {
+  letter-spacing: .6px;
+  text-align:left;
+  font-weight:bold;
+}
+#ingredientBody {
+  text-align:left;
+  letter-spacing: .6px;
+  line-height: 1.8;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #EFEFEF;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.overlay .closebtn {
+	  color: black;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 40px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<a href="index.html" class="w3-btn w3-xlarge" id="back"><i class="fa fa-arrow-left"></i></a>
+
+
+<div class="scroll">
+  <img src="images/soup1.PNG" alt="soup" style="border:0;">
+  <h1> Spiced Coconut Carrot Soup </h1>
+  <hr>
+  <h5> 🕒 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🙂
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="font-size:1em" onclick="openNav()">📄</span>
+</h5>
+  <h6> &nbsp; 30 mins &nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 servings
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="font-size:1em" onclick="openNav()"> Nutrition</span></h6>
+    <br>
+    <div class = "ingredient">
+          <h5 id="ingredient"> INGREDIENTS </h5>
+          <h5 id="ingredientBody"> 1 tablespoon coriander seeds <br /> 2 tablespoons virgin coconut or extra-virgin olive oil
+          <br /> 1 Tbsp. honey <br /> 1½ pounds carrots, peeled, chopped (about 4 cups), plus 1 carrot, thinly sliced <br /> Kosher salt
+          <br /> 2 red chiles, such as Fresno or cayenne, seeded, chopped<br />
+          1 large shallot, chopped <br />
+          1 1-inch piece ginger, peeled, finely grated <br /> 4 garlic cloves, chopped <br />
+          2 teaspoons curry powder <br /> 1 15-ounce can unsweetened coconut milk
+          <br /> 2 tablespoons fresh lemon juice <br /> Crushed red pepper flakes, toasted sesame seeds, sliced scallions, and/or cilantro leaves (for serving)
+
+</h5>
+    </div>
+
+    <div class = "recipe">
+      <h5 id="ingredient"> RECIPE PREPARATION </h5>
+      <h5 id="ingredientBody"> Finely grind coriander seeds in spice mill or with mortar and pestle; set aside. <br /><br />
+
+Heat oil in a small pot over medium-high. Add chopped carrots, season with salt, and cook, tossing occasionally, until lightly browned around the edges, 5–6 minutes. Add chiles, shallot, ginger, garlic, curry powder, and reserved ground coriander and cook, stirring often, until shallot and garlic are softened, 4–6 minutes. Add coconut milk and 1½ cups water. Bring to a boil, then reduce heat and simmer, stirring occasionally, until carrots are tender, 20–25 minutes. Add fish sauce, if using. Purée with an immersion blender or, carefully, in small batches in a blender until smooth (make sure the small cap set within the blender jar lid is removed so that steam can escape). Season with salt, if needed. <br /><br />
+
+Toss sliced carrot with lemon juice in a small bowl; season with salt. Add a pinch of red pepper, a few pinches of sesame seeds, and a handful of scallions and/or cilantro leaves and toss to combine. <br /><br />
+
+Divide soup among bowls. Top with carrot-herb salad just before serving.<br /><br /></h5>
+
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+
+
+<div class="footer">
+  <p></p>
+  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+</div>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <img src="images/shrimpfact.jpg" alt="shrimpfact" style="border:0;">
+
+  </div>
+</div>
+
+
+  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</body>
+</html>
