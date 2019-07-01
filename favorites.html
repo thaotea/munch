@@ -35,8 +35,8 @@ p {
   top: 0;
   width: 100%;
   background-color: #E9E9E9;
-  padding: 20px 10px;
-  padding-bottom: 20px;
+  padding: 10px 10px;
+  padding-bottom: 10px;
 
 }
 
@@ -50,6 +50,14 @@ p {
    width: 100%;
    background-color: #E9E9E9;
    color: #505050;
+}
+
+.w3-btn:active,
+.w3-btn:focus,
+.w3-btn:focus:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 
@@ -109,17 +117,17 @@ button {
 <body>
 
 
-<div class="header">
-  <a href="index.html">munch</a>
+  <div class="header">
+    <a href="index.html"><img src="panlogo.png" width="80"></a>
   </div>
 
-
+<section>
   <div class="scroll">
     <p id="message" style="display:inline;">  <br>&nbsp;&nbsp;&nbsp;&nbsp;Your favorites list is empty.
-      </a></p>
-    <p id="myP" style="display:none;">  <a href="pasta.html">
-        <img src="images/pasta.PNG" alt="pasta" style="border:0;">
-      </a></p>
+      </p>
+    <!--  <p id="myP1" style="display:none;">  <a href="pasta.html">
+          <img src="images/pasta.PNG" alt="pasta" style="border:0;">
+        </a></p> -->
 
     <p id="myP2" style="display:none;">    <a href="potato.html">
         <img src="images/potato.PNG" alt="potato" style="border:0;">
@@ -197,11 +205,12 @@ button {
 <br>
 <br>
 
+</section>
 <script>
 
 function myFunction() {
   if (localStorage.getItem("customName1") == "true") {
-    document.getElementById("myP").style.display = "inline";
+    document.getElementById("myP1").style.display = "inline";
     document.getElementById("message").style.display = "none";}
 
 
@@ -243,15 +252,21 @@ function myFunction() {
 
 </script>
 
+
 </div>
 
 <div class="footer">
-  <p></p>
-  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
-  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
-  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
-  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+  <nav>
+  <p><a href="index.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-home"></i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-plus"></i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-heart"></i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-user-circle-o"></i></a></p>
+  </nav>
 </div>
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/transition.js"></script>
 
 
 </body>

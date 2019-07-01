@@ -23,6 +23,7 @@
 <title>Munch</title>
 
 
+
 <style>
 
 body {
@@ -38,8 +39,8 @@ body {
   top: 0;
   width: 100%;
   background-color: #E9E9E9;
-  padding: 20px 10px;
-  padding-bottom: 30px;
+  padding: 10px 10px;
+  padding-bottom: 10px;
 
 }
 
@@ -54,6 +55,15 @@ body {
   background-color: #E9E9E9;
   color: #505050;
 }
+
+.w3-btn:active,
+.w3-btn:focus,
+.w3-btn:focus:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
+}
+
 
 
 .header a {
@@ -218,9 +228,11 @@ input:checked + .slider:before {
 </head>
 <body>
 
-<div class="header">
-  <a href="index.html">munch</a>
+  <div class="header">
+    <a href="index.html"><img src="panlogo.png" width="80"></a>
   </div>
+
+  <section>
 <br>
 <div class = "body-container">
   Push Notifications
@@ -255,15 +267,19 @@ Dietary restrictions <br><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class='fas fa-angle-right'></i></a>
 <hr>
 </div>
-
-
+</section>
 <div class="footer">
-  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
-  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
-  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
-  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+  <nav>
+  <p><a href="index.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-home"></i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-plus"></i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-heart"></i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-user-circle-o"></i></a></p>
+  </nav>
 </div>
 
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/transition.js"></script>
 
 
 

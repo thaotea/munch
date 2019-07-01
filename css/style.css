@@ -80,6 +80,10 @@ header input[type="date"] {
   appearance:none;
 }
 
+*:focus {
+outline: 0;
+outline: none;
+}
 
  input::-webkit-inner-spin-button, input::-webkit-clear-button {
     display: none;
@@ -142,6 +146,16 @@ header button svg {
 header button svg .fill {
   fill:#5484AE;
 }
+
+.w3-btn:active,
+.w3-btn:focus,
+.w3-btn:focus:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+
 
 .container {
   position:fixed;
@@ -213,4 +227,37 @@ ul.list li .buttons button svg {
 
 ul.list li .buttons button.remove svg .fill {
   fill:red;
+}
+
+.pt-perspective {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	perspective: 1200px;
+	transform-style: preserve-3d;
+}
+
+.pt-page {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	overflow: hidden;
+	backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
+}
+
+.pt-page-current,
+.no-js .pt-page {
+	visibility: visible;
+}
+
+.no-js body {
+	overflow: auto;
+}
+
+.pt-page-ontop {
+	z-index: 999;
 }

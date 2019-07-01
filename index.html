@@ -30,8 +30,8 @@ body {
   top: 0;
   width: 100%;
   background-color: #E9E9E9;
-  padding: 20px 10px;
-  padding-bottom: 20px;
+  padding: 10px 10px;
+  padding-bottom: 10px;
 }
 
 .footer {
@@ -45,6 +45,16 @@ body {
   background-color: #E9E9E9;
   color: #505050;
 }
+
+.w3-btn:active,
+.w3-btn:focus,
+.w3-btn:focus:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+
 
 
 .header a {
@@ -60,6 +70,14 @@ body {
 .header a:hover {
   background-color: #ddd;
   color: black;
+}
+
+button:active,
+button:focus,
+button:focus:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -86,7 +104,10 @@ div.scroll {
   position: absolute;
   right: 10px;
   top: 22px;
+  outline: none !important;
 }
+
+
 
 .filterDiv {
   width: 100%;
@@ -187,13 +208,16 @@ div.scroll {
 </head>
 <body>
 
+
+
 <div class="header">
-  <a href="index.html">munch</a>
+  <a href="index.html"><img src="panlogo.png" width="80"></a>
 </div>
 
 <div class="search">
-  <a href="search.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-search" style="color:#5484AE;"></i></a>
+  <a href="search.html" class="w3-btn w3-xlarge"><i class="fa fa-search" style="color:#5484AE;"></i></a>
 </div>
+<section>
 
 <div class="scroll">
 
@@ -297,14 +321,16 @@ div.scroll {
 <br></div>
 </div>
 
-
+</section>
 
 <div class="footer">
-  <p><a href="index.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-home">&nbsp;&nbsp;&nbsp;</i></a>
-  <a href="ingredients.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-plus">&nbsp;&nbsp;&nbsp;</i></a>
-  <a href="favorites.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-heart">&nbsp;&nbsp;&nbsp;</i></a>
-  <a href="profile.html" class="w3-btn w3-xlarge">&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o">&nbsp;&nbsp;&nbsp;</i></a></p>
+
+  <p><a href="index.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-home"></i></a>
+  <a href="ingredients.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-plus"></i></a>
+  <a href="favorites.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-heart"></i></a>
+  <a href="profile.html" class="w3-btn w3-xlarge"><i style="width:55px"class="fa fa-user-circle-o"></i></a></p>
 </div>
+
 
 
 <script id="entry-template" type="text/x-handlebars-template">
@@ -320,6 +346,7 @@ div.scroll {
 <script src="js/bootstrap.min.js"></script>
 <script src="js/handlebars-v4.0.11.js"></script>
 <script src="js/favorite.js"></script>
+<script src="js/transition.js"></script>
 
 <script>
 
@@ -403,6 +430,7 @@ div.scroll {
     });
   }
   </script>
+
 
 </body>
 </html>

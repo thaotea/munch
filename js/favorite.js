@@ -47,19 +47,20 @@ $(document).ready(function() {
   if (name) {
     $("#myFav1").html(name);
   }
-
+  let isTrue1 = true;
   $("#Favorite1").click(function() {
-      var name = localStorage.getItem('customName1');
 
-      if (name == "true") {
-            name = "false";
+      if (isTrue1 == true) {
+        var newName1 = "true";
+        isTrue1 = !isTrue1;
       }
       else {
-            name = "true";
+        var newName1 = "false";
+        isTrue1 = !isTrue1;
       }
 
-      $("#myFav1").html(name);
-      localStorage.setItem('customName1', name);
+      $("#myFav1").html(newName1);
+      localStorage.setItem('customName1', nameName1);
   });
 
   // when you first load the page, set a custom name if you have one:
